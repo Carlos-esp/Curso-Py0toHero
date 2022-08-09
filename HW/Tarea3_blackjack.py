@@ -1,7 +1,7 @@
 #Simulación de un juego de blackjack con 2 mazos
 import numpy as np
 
-mazo=["A",1,2,3,4,5,6,7,8,9,10,"J","Q","K"]
+mazo=["A",1,2,3,4,5,6,7,8,9,10,"J","Q","K"]*4
 
 def jugar_blackj(mazo, num_mazo):
     mazo_tot=mazo*num_mazo
@@ -22,12 +22,12 @@ def jugar_blackj(mazo, num_mazo):
     print(f'La mano del jugador es {mano_jug}, puntos totales: {puntos_jug}')
     print(f'La mano de la casa es {mano_casa}, puntos totales: {puntos_casa}')
     if puntos_jug>puntos_casa:
-        ganador="Jugador"
+        ganador="El jugador"
     elif puntos_jug<puntos_casa:
-        ganador="Casa"
+        ganador="La casa"
     else:
         ganador="Empate"
-    print(ganador)
+    print(f'EL ganador: {ganador}')
     return ganador
 
 
